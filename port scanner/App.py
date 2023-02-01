@@ -10,6 +10,9 @@ from PortScanner import Packet
 import binascii
 
 def check_if_open(port, response):
+    if response == None:
+        print("Port " + str(port) + " is: closed")
+        return False
     cont = binascii.hexlify(response)
     if cont[65:68] == b"012":
         return True
