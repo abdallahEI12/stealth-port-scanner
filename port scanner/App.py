@@ -144,7 +144,7 @@ class MainWindow(QMainWindow):
             rng_to = None
             rng_from = None
 
-        scan_dlg = scan_dialog(sndr_ip,rcvr_ip,port,rng_to,rng_from)
+        scan_dlg = scan_dialog(sndr_ip,rcvr_ip,port,rng_from,rng_to)
         scan_dlg.exec()
 
 if "__main__" in __name__:
