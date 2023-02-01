@@ -123,9 +123,10 @@ def check_if_open(port, response):
 
 
         
+if "__main__" in __name__:
 
-for port in [21, 22, 80, 8080]:
-    p = Packet("192.168.1.6", "8.8.8.8", port)
-    p.generate_packet()
-    result = p.send_packet()
-    check_if_open(port, result)
+    for port in [21, 22, 80, 8080]:
+        p = Packet("192.168.1.6", "8.8.8.8", port)
+        p.generate_packet()
+        result = p.send_packet()
+        check_if_open(port, result)
